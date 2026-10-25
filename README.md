@@ -2,7 +2,12 @@
 
 ![Portaldot Omni-VM Nexus Banner](./banner.png)
 
-> **Target Competition:** **Portaldot Hacker House 2026** (`$5,200 USDT` Cash Pool = `$2,600 USDT + $2,600 POT`, closes November 5, 2026 on DoraHacks: `https://dorahacks.io/hackathon/portaldot-hacker-house-2026`)  
+> **Target Competition:** **Portaldot Hacker House 2026** (`$5,200 USDT` Cash Pool = `$2,600 USDT + $2,600 POT`, closes November 6, 2026 04:00 UTC on DoraHacks: `https://dorahacks.io/hackathon/portaldot-hacker-house-2026/detail`)  
+> **Official PortaldotV3 Testnet Endpoints Configured:**
+> - **Node Explorer:** `https://node-console.portaldot.dev/`
+> - **Testnet Node URL (Substrate WASM):** `wss://test-node-v3.portaldot.dev`
+> - **Testnet Node EVM Endpoint:** `https://test-evm-rpc-v3.portaldot.dev`
+> - **Chain ID (EVM):** `420420777`
 > **Tracks Covered:**
 > 1. **Modular Cloud & Middleware** — Verifiable cross-VM intent middleware with deterministic `Blake2b-256` state commitments.
 > 2. **Multi-Chain & Cross-Chain Infrastructure** — Single-block atomic invocation from **Portaldot EVM (`Solidity 0.8.24`)** into **Portaldot Substrate WASM (`ink! v5` Rust)** via Precompile `0x0000000000000000000000000000000000000808` and XCM parachain routing.
