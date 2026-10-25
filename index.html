@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portaldot Omni-VM Nexus | Dual-VM (EVM + WASM ink!) Intent Router</title>
+  <style>
+    :root {
+      --bg: #0b0719;
+      --panel: #15102c;
+      --border: #332464;
+      --pink: #e6007a;
+      --cyan: #00d4ff;
+      --text: #f3effb;
+      --muted: #a395c4;
+      --ok: #2ee59d;
+      --err: #ff5c7c;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: radial-gradient(circle at top left, #231144, var(--bg) 65%);
+      color: var(--text);
+      padding: 24px;
+      line-height: 1.5;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding: 20px 24px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin-bottom: 24px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      background: rgba(230, 0, 122, 0.18);
+      color: #ff66b5;
+      border: 1px solid var(--pink);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+    }
+    .card h2 {
+      font-size: 17px;
+      color: var(--cyan);
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .stat-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      font-size: 14px;
+    }
+    .mono { font-family: Consolas, monospace; font-size: 12.5px; color: #9beeff; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      margin-top: 12px;
+    }
+    th, td {
+      text-align: left;
+      padding: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    .ok { color: var(--ok); font-weight: 700; }
+    .err { color: var(--err); font-weight: 700; }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <span class="badge">PORTALDOT HACKER HOUSE 2026 ($5,200 USDT CASH POOL)</span>
+      <h1 style="margin-top:8px;font-size:24px;">Portaldot Omni-VM Nexus: Atomic EVM Solidity &harr; WASM (ink!) Intent Bridge</h1>
+      <p style="color:var(--muted);font-size:14px;">Precompile 0x0808 Cross-VM Dispatch • Unified ERC-20 &harr; PSP22 Liquidity • XCM Parachain Settlement</p>
+    </div>
+    <div style="text-align:right;">
+      <div class="mono">WASM Precompile: 0x0000...0808</div>
+      <div class="mono" style="color:#ff66b5;">ink! Selector: 0x7a4f91b2</div>
+    </div>
+  </header>
+
+  <div class="grid">
+    <div class="card">
+      <h2>EVM Solidity Layer <span>PortaldotDualVMBridge.sol</span></h2>
+      <div class="stat-row"><span>Bridge Contract</span><span class="mono">0x9A676e78...CB607508</span></div>
+      <div class="stat-row"><span>Cross-VM Precompile</span><span class="mono">0x00000000...00000808</span></div>
+      <div class="stat-row"><span>Supported Assets</span><span>USDT (ERC-20) &amp; POT (Native)</span></div>
+      <div class="stat-row"><span>RefTime Weight Budget</span><span>2,500,000,000 per Intent</span></div>
+    </div>
+
+    <div class="card">
+      <h2>Substrate WASM Layer <span>contracts/lib.rs (ink! v5)</span></h2>
+      <div class="stat-row"><span>ink! AccountId32</span><span class="mono">0xd43593c7...a56da27d</span></div>
+      <div class="stat-row"><span>Message Selector</span><span class="mono">0x7a4f91b2 (settle_cross_vm_intent)</span></div>
+      <div class="stat-row"><span>State Commitment</span><span>Blake2b-256 (Intent + Volume + ParaId)</span></div>
+      <div class="stat-row"><span>Total Routed Volume</span><span class="ok">209,500.00 Dual-VM Units</span></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Deterministic Dual-VM Execution &amp; Security Invariant Trace (4/4 Passed)</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Case ID</th>
+          <th>Track</th>
+          <th>Asset &amp; Amount</th>
+          <th>XCM Target</th>
+          <th>Execution Status</th>
+          <th>WASM Blake2b-256 State Root</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="mono">PDOT-V3-001</td>
+          <td>Multi-Chain &amp; Cross-Chain</td>
+          <td>125,000.00 USDT</td>
+          <td>ParaID #2000</td>
+          <td class="ok">COMMITTED_DUAL_VM</td>
+          <td class="mono">0x219b8ea28123...</td>
+        </tr>
+        <tr>
+          <td class="mono">PDOT-V3-002</td>
+          <td>Modular Cloud &amp; Middleware</td>
+          <td>84,500.00 POT</td>
+          <td>ParaID #2004</td>
+          <td class="ok">COMMITTED_DUAL_VM</td>
+          <td class="mono">0x9883a476bf27...</td>
+        </tr>
+        <tr>
+          <td class="mono">PDOT-V3-003</td>
+          <td>Security Invariant (Replay)</td>
+          <td>125,000.00 USDT</td>
+          <td>ParaID #2000</td>
+          <td class="err">REVERTED_DUPLICATE_INTENT</td>
+          <td class="mono">0x000000000000...</td>
+        </tr>
+        <tr>
+          <td class="mono">PDOT-V3-004</td>
+          <td>Security Invariant (Spoof)</td>
+          <td>50,000.00 POT</td>
+          <td>ParaID #2034</td>
+          <td class="err">REVERTED_UNAUTHORIZED_CALLER</td>
+          <td class="mono">0x000000000000...</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+{
+  "project": "Portaldot Omni-VM Nexus: Atomic EVM Solidity <-> Substrate WASM (ink!) Intent & XCM Router",
+  "competition": "Portaldot Hacker House 2026 ($5,200 USDT Pool = $2,600 USDT + $2,600 POT)",
+  "hackathon_url": "https://dorahacks.io/hackathon/portaldot-hacker-house-2026",
+  "verification_timestamp": "2026-10-25T11:32:00Z",
+  "all_checks_passed": true,
+  "dual_vm_verification": {
+    "evm_bridge_contract": "0x9A676e781A523b5d0C0e43731313A708CB607508",
+    "wasm_precompile_address": "0x0000000000000000000000000000000000000808",
+    "ink_router_account_id32": "0xd43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d",
+    "ink_message_selector": "0x7a4f91b2",
+    "total_wasm_routed_atomic": 209500000000,
+    "total_wasm_routed_human": "209,500.00 Dual-VM Units (USDT + POT)",
+    "psp22_mirrored_balances": {
+      "5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY": 125000000000,
+      "5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty": 84500000000
+    },
+    "test_vectors_total": 4,
+    "test_vectors_passed": 4,
+    "execution_trace": [
+      {
+        "case_id": "PDOT-V3-001",
+        "track": "Track 2: Multi-Chain & Cross-Chain Infrastructure",
+        "evm_sender": "0x71C95911E9a5D330f4D621842EC243EE1343292e",
+        "wasm_recipient_ss58": "5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY",
+        "evm_token": "USDT (Portaldot EVM ERC-20)",
+        "amount_atomic": 125000000000,
+        "dest_parachain_id": 2000,
+        "caller_authorized": true,
+        "duplicate_attempt": false,
+        "expected_status": "COMMITTED_DUAL_VM",
+        "intent_id_hex": "0x689f16f598f5c9c531b1f67c28a953c8af961edff9311fb29fa6595ce3382f5c",
+        "actual_status": "COMMITTED_DUAL_VM",
+        "wasm_blake2_state_root": "0x08a05682d1e653bd3b4729525be991b1071f8f2c42bc8729e366e5093a87fa52",
+        "verified": true
+      },
+      {
+        "case_id": "PDOT-V3-002",
+        "track": "Track 1: Modular Cloud & Middleware",
+        "evm_sender": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "wasm_recipient_ss58": "5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty",
+        "evm_token": "POT (Portaldot Native Dual-VM Wrapper)",
+        "amount_atomic": 84500000000,
+        "dest_parachain_id": 2004,
+        "caller_authorized": true,
+        "duplicate_attempt": false,
+        "expected_status": "COMMITTED_DUAL_VM",
+        "intent_id_hex": "0x84e14fe16c7d172826ed77ebea67e592ec15256bc49dc18ad671d1cbacaeff9e",
+        "actual_status": "COMMITTED_DUAL_VM",
+        "wasm_blake2_state_root": "0xe3f79acae4c8a525ccc606f6409f8dd87fac733563d9bd258a9ad7362ab59838",
+        "verified": true
+      },
+      {
+        "case_id": "PDOT-V3-003",
+        "track": "Track 3: Ecosystem DApps & Security Invariants",
+        "evm_sender": "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+        "wasm_recipient_ss58": "5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY",
+        "evm_token": "USDT (Portaldot EVM ERC-20)",
+        "amount_atomic": 125000000000,
+        "dest_parachain_id": 2000,
+        "caller_authorized": true,
+        "duplicate_attempt": true,
+        "expected_status": "REVERTED_DUPLICATE_INTENT",
+        "intent_id_hex": "0x689f16f598f5c9c531b1f67c28a953c8af961edff9311fb29fa6595ce3382f5c",
+        "actual_status": "REVERTED_DUPLICATE_INTENT",
+        "wasm_blake2_state_root": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "verified": true
+      },
+      {
+        "case_id": "PDOT-V3-004",
+        "track": "Track 3: Ecosystem DApps & Security Invariants",
+        "evm_sender": "0xDeadBeef00000000000000000000000000000001",
+        "wasm_recipient_ss58": "5FLSigC9HGRKVhB9FiEo4Y3koPsNmBmLJbpXg2mp1hXcS59Y",
+        "evm_token": "POT (Portaldot Native Dual-VM Wrapper)",
+        "amount_atomic": 50000000000,
+        "dest_parachain_id": 2034,
+        "caller_authorized": false,
+        "duplicate_attempt": false,
+        "expected_status": "REVERTED_UNAUTHORIZED_CALLER",
+        "intent_id_hex": "0x58b85fdc0aa80e9048d636e4800eca14e1b372cdf14953685a95cb2ec641b6c4",
+        "actual_status": "REVERTED_UNAUTHORIZED_CALLER",
+        "wasm_blake2_state_root": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "verified": true
+      }
+    ],
+    "passed": true
+  },
+  "banner_png_bytes": 23912
+}
